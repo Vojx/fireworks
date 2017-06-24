@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Confession</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/mplayer.css">
+    <link rel="stylesheet" href="css/yanhua.css" />
+    <!-- 烟花 -->
+    <script src="jscripts/jquery-1.11.1.min.js"></script>
+    <script src="jscripts/jquery-ui.min.js"></script>
+    <script src="jscripts/firemaks.js" type="text/javascript"></script>
+    <script src="jscripts/main.js"></script>
+</head>
+
+<body>
+    <table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;display: none;">
+        <tr align="center">
+            <td valign="middle" height="100%">
+                <table cellpadding="10" cellspacing="0">
+                    <tr align="left" valign="top">
+                        <td>
+                            <span style="font-size: 16pt"><b><span class="cpt" style="color: #FF4B4B">F</span><span class="cpt" style="color: #CEFF45">i</span><span class="cpt" style="color: #86D3FF">r</span><span class="cpt" style="color: #0FFF5B">e</span><span class="cpt" style="color: #F0A400">m</span><span class="cpt" style="color: #48D1CC">a</span><span class="cpt" style="color: #FFCC00">k</span><span class="cpt" style="color: #CC3399">s</span> </b>
+                            </span>
+                            <br />
+                            <br /> 在你的网站上奇妙的烟花效果。
+                            <br /> 安装调整方便，工作在所有现代浏览器(IE 11 +)。
+                            <br /> 节日气氛,这个插件很容易使用!
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <b>Set colors:</b>:
+                                <br />
+                                <div id="colorset" style="margin-top: 10px">
+                                    <input type="radio" id="colorset5" name="colorset" value="4" />
+                                    <label for="colorset5">随机</label>
+                                    <input type="radio" id="colorset6" name="colorset" value="5" checked="checked" />
+                                    <label for="colorset6">完全随机</label>
+                                    <input type="radio" id="colorset1" name="colorset" value="0" />
+                                    <label for="colorset1">设置颜色 1</label>
+                                    <input type="radio" id="colorset2" name="colorset" value="1" />
+                                    <label for="colorset2">设置颜色 2</label>
+                                    <input type="radio" id="colorset3" name="colorset" value="2" />
+                                    <label for="colorset3">设置颜色 3</label>
+                                    <input type="radio" id="colorset4" name="colorset" value="3" />
+                                    <label for="colorset4">设置颜色 4</label>
+                                </div>
+                            </div>
+                            <div id="descclrset" style="margin-top: 10px">
+                                <b>颜色设置描述</b>:
+                                <br />
+                                <div id="colorsetdesc" style="margin-top: 10px">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <b>设置类别</b>:
+                                <br />
+                                <div id="typeset" style="margin-top: 10px;">
+                                    <input type="radio" id="typeset1" name="typeset" value="0" />
+                                    <label for="typeset1">
+                                        随机</label>
+                                    <input type="radio" id="typeset2" name="typeset" value="1" />
+                                    <label for="typeset2">
+                                        点</label>
+                                    <input type="radio" id="typeset3" name="typeset" value="2" checked="checked" />
+                                    <label for="typeset3">
+                                        跟随</label>
+                                    <input type="radio" id="typeset4" name="typeset" value="3" />
+                                    <label for="typeset4">
+                                        闪烁</label>
+                                </div>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <b>设置小类别</b>:
+                                <br />
+                                <div id="typeset_child" style="margin-top: 10px;">
+                                    <input type="radio" id="typeset_child1" name="typeset_child" value="0" />
+                                    <label for="typeset_child1">
+                                        随机</label>
+                                    <input type="radio" id="typeset_child2" name="typeset_child" value="1" />
+                                    <label for="typeset_child2">
+                                        点</label>
+                                    <input type="radio" id="typeset_child3" name="typeset_child" value="2" />
+                                    <label for="typeset_child3">
+                                        跟随</label>
+                                    <input type="radio" id="typeset_child4" name="typeset_child" value="3" />
+                                    <label for="typeset_child4">
+                                        闪烁</label>
+                                    <input type="radio" id="typeset_child5" name="typeset_child" value="4" checked="checked" />
+                                    <label for="typeset_child5">
+                                        继承</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <b>声音</b>:
+                                <br />
+                                <div id="sound" style="margin-top: 10px;">
+                                    <input type="radio" id="sound1" name="sound" value="0" />
+                                    <label for="sound1">关</label>
+                                    <input type="radio" id="sound2" name="sound" value="1" checked="checked" />
+                                    <label for="sound2">开</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="mp">
+        <div class="mp-box">
+            <img src="images/mplayer_error.png" alt="music cover" class="mp-cover">
+            <div class="mp-info">
+                <p class="mp-name">燕归巢</p>
+                <p class="mp-singer">许嵩</p>
+                <p><span class="mp-time-current">00:00</span>/<span class="mp-time-all">00:00</span></p>
+            </div>
+            <div class="mp-btn">
+                <button class="mp-prev" title="上一首"></button>
+                <button class="mp-pause" title="播放"></button>
+                <button class="mp-next" title="下一首"></button>
+                <button class="mp-mode" title="播放模式"></button>
+                <div class="mp-vol">
+                    <button class="mp-vol-img" title="静音"></button>
+                    <div class="mp-vol-range" data-range_min="0" data-range_max="100" data-cur_min="80">
+                        <div class="mp-vol-current"></div>
+                        <div class="mp-vol-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mp-pro">
+                <div class="mp-pro-current"></div>
+            </div>
+            <div class="mp-menu">
+                <button class="mp-list-toggle"></button>
+                <button class="mp-lrc-toggle"></button>
+            </div>
+        </div>
+        <button class="mp-toggle">
+            <span class="mp-toggle-img"></span>
+        </button>
+        <div class="mp-lrc-box">
+            <ul class="mp-lrc"></ul>
+        </div>
+        <button class="mp-lrc-close"></button>
+        <div class="mp-list-box">
+            <ul class="mp-list-title"></ul>
+            <table class="mp-list-table">
+                <thead>
+                    <tr>
+                        <th>歌名</th>
+                        <th>歌手</th>
+                        <th>时长</th>
+                    </tr>
+                </thead>
+                <tbody class="mp-list"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <span class="comments">/**</span>
+                <br />
+                <span class="space" /><span class="comments">*2012—08-14,</span>
+                <br />
+                <span class="space" /><span class="comments">*2017-06-11.</span>
+                <br />
+                <span class="space" /><span class="comments">*/</span>
+                <br /> Boy name = <span class="keyword">Mr </span>Wang
+                <br /> Girl name = <span class="keyword">Mrs </span>He
+                <br />
+                <span class="comments">// Fall in love river. </span>
+                <br /> The boy love the girl;
+                <br />
+                <span class="comments">// They love each other.</span>
+                <br /> The girl loved the boy;
+                <br />
+                <span class="comments">// AS time goes on.</span>
+                <br /> The boy can not be separated the girl;
+                <br />
+                <span class="comments">// At the same time.</span>
+                <br /> The girl can not be separated the boy;
+                <br />
+                <span class="comments">// No matter how far the distance is.</span>
+                <br />
+                <span class="comments">// They are still heart to heart.</span>
+                <br />
+                <span class="keyword">The boy</span> very <span class="keyword">happy</span>;
+                <br />
+                <span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;
+                <br />
+                <span class="placeholder" /><span class="comments">// Whether it is right now</span>
+                <br />
+                <span class="placeholder" /><span class="comments">// Still in the distant future.</span>
+                <br />
+                <span class="placeholder" />With a firm faith;
+                <br />
+                <span class="comments">// Depend on each other forever.</span>
+                <br />
+                <br>
+                <br> I want to say:
+                <br /> Baby, I love you forever;
+                <br />
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        亲爱的，这是我们相爱在一起的时光。
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        爱你直到永永远远。
+                        <br/>
+                        <div class="signature">—— 涛</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- 桃心 -->
+<script type="text/javascript" src="jscripts/garden.js"></script>
+<script type="text/javascript" src="jscripts/functions.js"></script>
+<script type="text/javascript" src="jscripts/love.js"></script>
+<script src="js/mplayer.js"></script>
+<script src="js/mplayer-list.js"></script>
+<script src="js/mplayer-functions.js"></script>
+<script src="js/jquery.nstSlider.min.js"></script>
+<script src="js/mainPlay.js"></script>
