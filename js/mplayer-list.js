@@ -20,12 +20,6 @@
 
 var mplayer_song = [[
 	{
-		"basic":true,
-		"name":"2016单曲集",
-		"singer":"许嵩",
-		"img":"https://y.gtimg.cn/music/photo_new/T001R300x300M000000CK5xN3yZDJt.jpg"
-	},
-	{
 		"name":"告白气球",
 		"sing":"周杰伦",
 		"src":"http://sc1.111ttt.com:8282/2016/1/06/25/199251943186.mp3?tflag=1498044608&pin=baf7f1d0cfeab498e315bc2cb4ed23ae",
